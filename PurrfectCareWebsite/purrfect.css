@@ -1,0 +1,3473 @@
+Updates to keyboard shortcuts … On Thursday, August 1, 2024, Drive keyboard shortcuts will be updated to give you first-letters navigation.Learn more
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap'); 
+@import url(https://db.onlinewebfonts.com/c/99790fd61792015f0b0f806484e6c296?family=Kamerik+105+W00+Book);
+@import url(https://db.onlinewebfonts.com/c/1bde18c4499220f05025d1fab9ae1474?family=Ginger+Cat);
+
+.html{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.logo {
+    font-family: 'Ginger Cat', sans-serif;
+    color: #614439;
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    margin-left: 0;
+    gap: 5px;
+    margin-top: 17px;
+    position: relative;
+
+}
+
+.logo img {
+    height: 80px;
+    margin-right: 1px;
+    margin-left: 7rem;
+    margin-top: 17px;
+    z-index: 1;
+
+}
+
+h1 {
+    font-family: 'Ginger Cat', sans-serif;
+    color: #614439;
+    z-index: 1;
+}
+
+.hp_pawprint1,
+.hp_pawprint2,
+.hp_pawprint3,
+.hp_pawprint4,
+.hp_pawprint5,
+.hp_pawprint6 {
+    max-width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.hp_pawprint1 {
+    background-image: url('img/hp1.png');
+    width: 400px;
+    height: 550px;
+    top: 0;
+    left: -2%;
+    z-index: 0;
+}
+
+.hp_pawprint2 {
+    background-image: url(img/hp2.png);
+    width: 260px;
+    height: 300px;
+    top: 98.6%;
+    left: 35%;
+}
+
+.hp_pawprint3 {
+    background-image: url('img/hp3.png');
+    width: 150px;
+    height: 150px;
+    top: -1%;
+    left: 35%;
+}
+
+.hp_pawprint4 {
+    background-image: url('img/hp4.png');
+    width: 150px;
+    height: 150px;
+    top: 31%;
+    left: 0%;
+}
+
+.hp_pawprint5 {
+    background-image: url('img/hp5.png');
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    left: 40%;
+}
+
+.hp_pawprint6 {
+    background-image: url('img/hp8.png');
+    width: 165px;
+    height: 250px;
+    top: 72%;
+    left: 88%;
+}
+
+main {
+    height: 762px;
+    overflow: hidden;
+}
+
+.nav-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    margin-top: 50px;
+}
+
+.bone:hover {
+    transform: translateX(1px) translateY(-1px);
+}
+
+.bone {
+    --ty: -1em;
+    --tx: -1em;
+    --s: 5px;
+    display: inline-block;
+    text-align: center;
+    background: #ddc5a8;
+    color: #6a3d3d;
+    font-weight: bold;
+    padding: 1em 1em 1.03em;
+    margin: 0.35rem;
+    line-height: 0.05;
+    border-radius: 0.4em;
+    position: relative;
+    min-width: 5em;
+    text-decoration: none;
+    font-family: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
+    filter: url('#goo');
+    transition: transform 0.3s ease;
+}
+
+.bone::before {
+    content: "";
+    position: absolute;
+    top: var(--ty);
+    bottom: var(--ty);
+    left: 0;
+    right: 0;
+    background: radial-gradient(farthest-side, #ddc5a8 98%, transparent 100%) top left,
+        radial-gradient(farthest-side, #ddc5a8 98%, transparent 100%) top right,
+        radial-gradient(farthest-side, #ddc5a8 98%, transparent 100%) bottom left,
+        radial-gradient(farthest-side, #ddc5a8 98%, transparent 100%) bottom right;
+    background-size: 0 0;
+    background-repeat: no-repeat;
+    transition: 0.7s;
+}
+
+.bone:hover::before {
+    background-size: var(--s) var(--s);
+    left: var(--tx);
+    right: var(--tx);
+}
+
+body {
+    background: white;
+    --bg: #614439;
+    --color: white;
+    margin-left: 0%;
+    margin-right: 0%;
+    overflow-x: hidden;
+}
+
+.menu-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2.2rem;
+    color: #614439;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 1;
+    margin-LEFT: auto;
+    display: none;
+    margin-top: -10%;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 0;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero-text {
+    font-size: 4rem;
+    flex: wrap;
+}
+
+.hero-text h2 {
+    font-family: 'museo', sans-serif;
+    font-weight: 700;
+    font-size: 88pt;
+    font-style: normal;
+    margin: 0 0 100px 0;
+    color: #6a3d3d;
+    position: absolute;
+    left: 10%;
+    top: 21%;
+}
+
+.hero-text p {
+    font-family: 'publica sans', sans-serif;
+    font-size: 20pt;
+    max-width: 600px;
+    position: absolute;
+    left: 10%;
+    top: 54%;
+    margin-top: 9px;
+    color: #6a3d3d;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    left: 10%;
+    top: 65%;
+}
+
+.btn {
+    font-family: 'myriad hebrew', sans-serif;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    background-color: #cda18a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 75px;
+    top: -1%;
+}
+
+.btn:hover {
+    background-color: #bf9e85;
+    box-shadow: 0px 15px 20px rgba(221, 197, 168, 1);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+
+.hero-image img {
+    max-width: 1141px;
+    width: 100%;
+    height: auto;
+    margin-right: 0px;
+    margin-top: -12.2%;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)) drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.social {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.social-icon-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    transition: transform 0.3s;
+    top: 20%;
+}
+
+.social-icon-container:hover {
+    transform: scale(1.1);
+}
+
+.social-icon {
+    font-size: 24px;
+}
+
+.social-icon i {
+    color: #fff;
+} 
+
+
+#about {
+    background-color: white;
+  width: 100%;
+    text-align: center;
+    margin-top: -5%;
+    margin-bottom: 10%;
+    position:relative;
+    overflow:hidden;
+    height: 700px;
+  }
+  
+  #about h2 {
+    color: black; 
+    margin-top: 0;
+    font-family: 'museo', sans-serif;
+    font-weight: 700;
+    font-size: 45pt;
+    top: 80%;
+  }
+
+  .about-us .pawprinttttt .p2,
+.about-us .pawprinttttt .p4 {
+    max-width: 100%; 
+    max-height: 100%;
+    box-sizing: border-box;
+}
+  
+  .container {
+    flex-direction: column;
+    align-items: center;
+    display: inline-block;
+    position: relative;
+
+  }
+
+  .about-paw {
+    position: relative;
+}
+
+.pawprinttttt.p1 {
+    background-image: url('img/about1.png');
+    right: 90%;
+    top: 0%;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+  }
+
+  .pawprinttttt.p2 {
+    background-image: url('img/about2.png');
+    right: -21.03%;
+    top: 0%;
+    width: 338px;
+    height: 400px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+
+  .pawprinttttt.p3 {
+    background-image: url('img/about3.png');
+    right: 54%;
+    top: 98%;
+    width: 750px;
+    height: 750px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+
+  }
+
+  .pawprinttttt.p4 {
+    background-image: url('img/about4.png');
+    right: -21.03%;
+    top: 120%;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .pawprinttttt.p5 {
+    background-image: url('img/hp7.png');
+    right: -23%;
+    top: 72%;
+    width: 173px;
+    height: 200px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+  }
+
+  .pawprinttttt.p6 {
+    background-image: url('img/hp3.png');
+    right: 5%;
+    top: 0%;
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: 0;
+
+  }
+
+  .pawprinttttt.p7 {
+    background-image: url('img/hp4.png');
+    right: 90%;
+    top: 5%;
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+
+  }
+  
+  .pawprinttttt.p8 {
+    background-image: url('img/hp5.png');
+    right: 70%;
+    top: 85%;
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+
+  }
+
+  .pawprinttttt.p9 {
+    background-image: url('img/hp8.png');
+    right: 30%;
+    top: 155%;
+    width: 230px;
+    height: 2300px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+
+  }
+  
+  
+  .content {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .text {
+    flex: 1;
+  }
+
+  
+  .image-container {
+    position: absolute;
+    bottom: -148%;
+    left: -8%;
+}
+
+.image {
+    width: 520px;
+    height: auto; 
+    margin-left: -80%;
+    margin-top: 55%;
+}
+  .content p {
+    margin-bottom: 0;
+  }
+  .lead {
+    margin-bottom: 10px;
+    font-family: 'museo', sans-serif;
+    font-weight: 700;
+    font-size: 30pt;
+    color: black;
+    opacity: 77%;
+  }
+  span {
+    color: #b3856d;
+}
+  .bigger {
+    font-family: 'publica sans', sans-serif;
+    font-size: 20pt;
+    margin-bottom: 10px;
+    max-width: 1000px;
+    margin-top: 50px;
+  }
+  .bitones {
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+}
+
+.biton {
+    font-family: 'myriad hebrew', sans-serif;
+    font-size: 1.2rem; 
+    padding: 15px 30px;
+    background-color: #cda18a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1; 
+}
+.biton:hover {
+    background-color: #bf9e85;
+    box-shadow: 0px 15px 20px rgba(221, 197, 168, 1);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+#mission-vision {
+    background-color: #f8f8f8;
+    padding: 60px 100px;
+    margin-top: -10%;
+    position: relative;
+    width: 1005;
+    padding-bottom: 3.2%;
+    overflow: hidden;
+   
+}
+
+#mission-vision .container {
+    font-size: 30pt;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: -5%;
+}
+
+#mission-vision .card {
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 60px 40px; 
+    width: 57%;
+    position: relative;
+    text-align: center;
+}
+
+#mission-vision .cards {
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 60px 40px; 
+    width: 57%;
+    position: relative;
+    text-align: center;
+    background-color: #c49a66;
+}
+
+.card, .cards {
+    margin-top: 10px;
+    border: 5px solid #000; 
+    flex: 1;
+}
+
+
+#mission-vision .text {
+    font-size: 20pt;
+    margin-bottom: 20px;
+    font-family: 'publica sans', sans-serif;
+    line-height: 1.5;
+    color: #613811;
+    margin: 10px 0;
+    text-align: center;
+
+}
+
+#mission-vision .meow, #mission-vision .aww {
+    width: 430px;
+
+}
+
+.card .meow {
+    position: absolute;
+    bottom: -182px;
+    left: -230px;
+    height: auto;
+    z-index: 1;
+}
+
+.cards .aww {
+    position: absolute;
+    bottom: -131px;
+    right: -230px;
+    height: auto;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem;
+}
+
+.mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px; 
+}
+
+.vision {
+    margin-right: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+.mission, .vision {
+    align-items: center;
+    position: relative;
+    flex: 1;
+
+}
+
+.mission .heading, .vision .heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.mission .heading img, .vision .heading img {
+    width: 80px; 
+    height: auto; 
+}
+
+.vision .heading img {
+    margin-left: 10px; 
+}
+
+.mission h3, .vision h3 {
+    font-family: 'museo', sans-serif;
+    font-weight: 700;
+    font-size: 36pt;
+    color: black;
+}
+.mv-paw {
+    position: relative;
+}
+
+.pawprintttt.p1 {
+    background-image: url('img/mv1.png');
+    right: 55%;
+    top: 5%;
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+  }
+
+  .pawprintttt.p7 {
+    background-image: url('img/hp4.png');
+    right: 95%;
+    top: 60%;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+}
+
+.pawprintttt.p8 {
+    background-image: url('img/hp3.png');
+    right: 45%;
+    top: 4.8%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+}
+
+.pawprintttt.p4 {
+    background-image: url('img/mv2.png');
+    right: -8.04%;
+    top: 53%;
+    width: 550px;
+    height: 550px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 0%;
+}
+
+.pawprintttt.p5 {
+    background-image: url('img/hp5.png');
+    right: 45%;
+    top: 55%;
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+}
+
+
+.pawprintttt.p6 {
+    background-image: url('img/hp7.png');
+    right: -6%;
+    top: 2.5%;
+    width: 265px;
+    height: 250px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+}
+#our-services {
+    text-align: center;
+    padding: 50px 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+#our-services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#our-services h2 {
+    font-family: 'museo', sans-serif;
+    font-weight: 700;
+    font-size: 45pt;
+    color: black;
+    margin-bottom: 10px;
+}
+
+#our-services .description {
+    font-family: 'myriad hebrew', sans-serif;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.service-paw {
+    position: relative;
+}
+
+.pawprinttt.paw1 {
+    background-image: url('img/contact7.png');
+    right: 87.7%;
+    top: -9.85%;
+    width: 330px;
+    height: 330px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+
+  .pawprinttt.paw2 {
+    background-image: url('img/hp5.png');
+    right: -15%;
+    top: -2%;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+
+  .pawprinttt.paw3 {
+    background-image: url('img/hp4.png');
+    right: 100%;
+    top: 25%;
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+
+  .pawprinttt.paw4 {
+    background-image: url('img/contact8.png');
+    right: -13%;
+    top: 60%;
+    width: 184px;
+    height: 250px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+
+  .pawprinttt.paw5 {
+    background-image: url('img/hp5.png');
+    right: 100%;
+    top: 80%;
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 8fr));
+    gap: 20px;
+    
+}
+
+.service-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s ease; 
+}
+
+.service-item:hover {
+    box-shadow: 0 0 20px rgba(194, 194, 194, 1);
+}
+
+.service-item img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    font-family: 'museo', sans-serif;
+    font-weight: 700;
+    font-size: 18pt;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-family: 'myriad hebrew', sans-serif;
+    font-size: 16px;
+    color: #333;
+
+}
+
+#galleryy {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(221, 197, 168);
+    background: radial-gradient(circle, rgba(221, 197, 168, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    position: relative; 
+}
+
+#galleryy::before,
+#galleryy::after {
+    content: '';
+    position: absolute;
+    background-image: url('img/p.psd.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#galleryy::before {
+    width: 400px;
+    height: 400px;
+    bottom: -10%;
+    left: 1%;
+    opacity: 0.3;
+}
+
+#galleryy::after {
+    width: 450px;
+    height: 450px;
+    bottom: -10%;
+    right: 1%;
+    opacity: 0.3;
+}
+
+.gallery {
+    width: 100%;
+    overflow: hidden;
+}
+
+#galleryy h2 {
+    margin-left: 5%;
+    font-family: 'museo', sans-serif;
+    font-weight: 700;
+    font-size: 45pt;
+    color: black;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 10px #fff, 1px 1px 10px #fff;
+}
+
+.gallery-container {
+    align-items: center;
+    display: flex;
+    height: 500px;
+    margin: 0 auto;
+    max-width: 1500px;
+    position: relative;
+}
+
+.gallery-item {
+    height: 300px;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    width: 430px;
+    z-index: 0;
+    border-radius: 15px;
+    background-size: contain;
+}
+
+.gallery-item-1 {
+    left: 15%;
+    opacity: .4;
+    transform: translateX(-50%);
+}
+
+.gallery-item-2, .gallery-item-4 {
+    height: 350px;
+    opacity: 0.8;
+    width: 380px;
+    z-index: 1;
+}
+
+.gallery-item-2 {
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+.gallery-item-3 {
+    box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
+    height: 400px;
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 530px;
+    z-index: 2;
+}
+
+.gallery-item-4 {
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+.gallery-item-5 {
+    left: 85%;
+    opacity: .4;
+    transform: translateX(-50%);
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+    height: 100px;
+    position: relative;
+    top: -50px;
+}
+
+.gallery-controls button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 0 50px;
+    padding: 0 12px;
+    text-transform: capitalize;
+}
+
+.gallery-controls-button:focus {
+    outline: none;
+}
+
+.gallery-controls-previous {
+    position: relative;
+    color: #613811;
+    font-family: 'museo', sans-serif;
+}
+
+.gallery-controls-previous::before {
+    border: solid #613811;
+    border-width: 0 5px 5px 0;
+    content: '';
+    display: inline-block;
+    height: 5px;
+    left: -30px;
+    padding: 10px;
+    position: absolute;
+    top: 25%;
+    transform: rotate(135deg) translateY(-50%);
+    transition: left 0.5s ease-in-out;
+    width: 5px;
+}
+
+.gallery-controls-previous:hover::before {
+    left: -40px;
+}
+
+.gallery-controls-next {
+    color: #613811;
+    font-family: 'museo', sans-serif;
+    position: relative;
+}
+
+.gallery-controls-next::before {
+    border: solid #613811;
+    border-width: 0 5px 5px 0;
+    content: '';
+    display: inline-block;
+    height: 5px;
+    padding: 10px;
+    position: absolute;
+    right: -30%;
+    top: 45%;
+    transform: rotate(-45deg) translateY(-50%);
+    transition: right 0.5s ease-in-out;
+    width: 5px;
+}
+
+.gallery-controls-next:hover::before {
+    right: -40px;
+}
+
+.gallery-nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    margin-top: 1px;
+    margin-bottom: 5%;
+}
+
+.gallery-nav li {
+    background: transparent;
+    border: 2px solid #000;
+    border-radius: 50%;
+    height: 10px;
+    margin: 0 8px;
+    width: 10px;
+    transition: background-color 0.6s ease;
+}
+
+.gallery-nav li.gallery-item-selected {
+    background: #000;
+}
+
+.paw-print {
+    opacity: 0.4;
+    width: 250px;
+    height: 250px;
+    top: 0px;
+    right: 0%;
+    position: absolute;
+    background-image: url('img/p.psd.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+
+#team {
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+    overflow: visible;
+    background-color: white;
+    overflow: hidden;
+}
+
+#team h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #613811;
+    font-family: 'museo', sans-serif;
+    font-weight: 700;
+    font-size: 45pt;
+    color: black;
+    margin-top: -1%;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.team-member {
+    padding: 15px;
+    text-align: center;
+    width: 400px;
+    position: relative;
+    z-index: 1;
+    gap: 10px;
+
+}
+
+.team-member img {
+    width: 100%;
+    filter: drop-shadow(0 -1mm 2mm #696969);
+    transition: 1s ease;
+
+}
+
+.team-member img:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+}
+
+
+.team-member h3 {
+    font-family: 'Museo', sans-serif;
+    margin: 15px 0 5px;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.team-member p {
+    font-family: 'Publica sans', sans-serif;
+    margin: 0;
+    font-size: 1.0rem;
+    color: #000;
+}
+.move-up {
+    margin-top: -130px;
+
+}
+
+.paw-container {
+    position: relative;
+}
+
+.pawprint.paw1 {
+    background-image: url('img/ourteam1.png');
+    right: 0%;
+    top: -35px;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+.pawprint.paw2 {
+    background-image: url('img/ourteam2.png');
+    left: 0%;
+    top: -35px;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+
+
+}
+
+.pawprint.paw3 {
+    background-image: url('img/ourteam3.png');
+    right: 0%;
+    top: 76.5%;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+
+
+}
+
+.pawprint.paw4 {
+    background-image: url('img/ourteam4.png');
+    left: 5%;
+    bottom: 50px;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+
+
+}
+
+.pawprint.paw5 {
+    background-image: url('img/cat.png');
+    left: 0; /* Move to the left side */
+    bottom: -55px; /* Keep the bottom position as is */
+    top: 57%;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.pawprint.paw6 {
+    background-image: url('img/Logoooo.png');
+    margin-bottom: 20px;
+    left: 33%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.separator1, 
+.separator3, 
+.separator2,
+.separator4,
+.separator5,
+.separator {
+    background-color: #ede0d1;
+    height: 30px;
+    width: 100%;
+}
+
+#contact {
+    padding: 1px 0px;
+    background-color: #fff;
+    position: relative;
+    overflow:hidden ;
+}
+
+#contact h2 {
+    font-family: 'Museo', sans-serif;
+    font-weight: 700;
+    font-size: 50pt;
+    margin-bottom: 60px;
+    margin-left: 6%;
+    color: #000;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-column {
+    flex: 1;
+    max-width: 800px;
+    margin: 0 20px;
+    justify-content: center;
+}
+
+.contact-column.left {
+    margin-right: 40px; /* Adjust this value to move it to the right */
+}
+
+.contact-column.right {
+    margin-left: 40px; /* Adjust this value to move it to the left */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-item img {
+    width: 135px;
+    margin-right: 20px;
+}
+
+.contact-text h3 {
+    font-family: 'Myriad Hybrew', sans-serif;
+    margin: 0;
+    font-size: 0.8em;
+    color: #777;
+    text-transform: uppercase;
+}
+
+.contact-text p {
+    font-family: 'Publica sans', sans-serif;
+    margin: 7px 0 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.contact-paw {
+    position: relative;
+
+}
+
+.pawprint.paw1 {
+    background-image: url(img/ourteam1.png);
+    right: 0%;
+    top: -35.8px;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.pawprintt.paw2 {
+    background-image: url('img/contact6.png');
+    right: 52%;
+    top: 284px;
+    width: 244px;
+    height: 330px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.pawprintt.paw3 {
+    background-image: url('img/contact7.png');
+    left: -13.2%;
+    top: -56px;
+    width: 290px;
+    height: 290px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    z-index: 0;
+
+}
+
+.pawprintt.paw4 {
+    background-image: url('img/contact9.png');
+    left: 35%;
+    top: -50px;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+
+.pawprintt.paw5 {
+    background-image: url('img/contact10.png');
+    left: -17.7%;
+    top: 247px;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+
+}
+
+/* Paw prints background */
+#contact::before {
+    content: '';
+    background: url('path/to/paw-prints-image.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+footer {
+    background-color: #ede0d1;
+    padding: 30px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+  
+.footer-left {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+  
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.footer-logo {
+    margin-right: 20px;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-links {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+.footer-links .quick-links,
+.footer-links .useful-links {
+    margin-right: 40px;
+}
+
+.footer-links h4 {
+    font-family: 'Kamerik', sans-serif;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #5e5347;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    font-family: 'Publica sans', sans-serif;
+    color: #777;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    color: #5d5346;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.stay-connected {
+    margin-bottom: 20px;
+ }
+.stay-connected h4 {
+    font-family: 'Kamerik', sans-serif;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #5e5347;
+}
+
+.stay-connected form {
+    display: flex;
+}
+
+.stay-connected input[type="email"] {
+    padding: 10px;
+    border: 1px solid #5d5346;
+    border-radius: 5px 0 0 5px;
+    font-family: 'Publica sans', sans-serif;
+    outline: none;
+}
+
+.stay-connected button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #5d5346;
+    color: #fff;
+    font-family: 'Publica sans', sans-serif;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.stay-connected button[type="submit"]:hover {
+    background-color: #555;
+}
+
+.footer-copyright {
+    margin-bottom: -2%;
+    font-family: 'Publica sans', sans-serif;
+    font-size: 0.9em;
+    color: #5d5346;
+}
+
+.nav-container.show-nav {
+    display: block; 
+}
+.menu.open .nav-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+
+}
+
+
+
+@media (max-width: 1440px) {
+    .pawprinttttt.p9 {
+        background-image: url(img/hp8.png);
+        right: 30%;
+        top: 139%;
+        width: 182px;
+        height: 2300px;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+    }
+    .social {
+        bottom: 187px;
+    }
+    .btn {
+        font-family: 'myriad hebrew', sans-serif;
+        font-size: 1.2rem;
+        padding: 15px 30px;
+        background-color: #cda18a;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5rem;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        margin-top: 31px;
+        top: -1%;
+    }
+    .hero-image img {
+        max-width: 1114px;
+        width: 100%;
+        height: auto;
+        margin-right: 0px;
+        margin-top: -10.8%;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)) drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+    }
+    .hero-text p {
+        font-size: 20pt;
+        top: 51%;
+    }
+    .hp_pawprint2 {
+        background-image: url(img/hp2.png);
+        width: 260px;
+        height: 300px;
+        top: 76.2%;
+        left: 35%;
+        display: block;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .pawprintttt.p1 {
+        background-image: url(img/mv1.png);
+        right: 55%;
+        top: 0;
+        width: 700px;
+        height: 500px;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+    .buttons {
+            display: flex;
+            gap: 20px;
+            position: absolute;
+            left: 10%;
+            top: 62%;
+        }
+
+    .hp_pawprint6 {
+        background-image: url(img/hp8.png);
+        width: 165px;
+        height: 250px;
+        top: 143%;
+        left: 82%;
+    }
+    .image {
+        width: 525px;
+        height: auto;
+        margin-left: -122%;
+        margin-top: 27%;
+        position: relative;
+        top: -86px;
+        left: 65px;
+    }
+    .pawprintttt.p4 {
+        background-image: url(img/mv2.png);
+        right: -8.04%;
+        top: 55.5%;
+        width: 550px;
+        height: 550px;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-bottom: 0%;
+    }
+    .pawprint.paw2 {
+        background-image: url(img/ourteam2.png);
+        left: -7%;
+        top: -35px;
+        width: 600px;
+        height: 600px;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+    }
+
+
+}
+
+
+
+@media (max-width: 1390px) {
+    .hero-text p {
+        font-size: 20pt;
+        top: 61%;
+        margin-top: 9px;
+    }
+    .btn {
+        margin-top: 117px;
+    }
+    .social {
+        bottom: 159px;
+    }
+    .hp_pawprint2 {
+        background-image: url(img/hp2.png);
+        width: 260px;
+        height: 300px;
+        top: 76.2%;
+        left: 35%;
+        display: block;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .pawprinttttt.p9 {
+        display: none;
+    }
+    .pawprintttt.p4 {
+        right: -10.04%;
+        top: 58.6%;
+    }
+    .pawprint.paw1 {
+        right: 0%;
+        top: -36.8px;
+        width: 511px;
+    }
+    #contact h2 {
+        margin-left: 9%;
+    }
+    .pawprint.paw6 {
+        background-image: url(img/Logoooo.png);
+        margin-bottom: 20px;
+        left: 30%;
+        width: 100px;
+    }
+    .hero-image img {
+        max-width: 1030px;
+        margin-top: -5.9%;
+    }
+    .pawprintttt.p1 {
+        top: 0%;
+    }
+    .hp_pawprint6 {
+        background-image: url(img/hp8.png);
+        width: 165px;
+        height: 250px;
+        top: 143%;
+        left: 82%;
+    }
+}
+
+
+
+@media (max-width: 1325px) {
+    .pawprintttt.p4 {
+        right: -10.04%;
+        top: 62.7%;
+    }
+    .move-up {
+        margin-top: 0px;
+    }
+    .pawprint.paw3 {
+        background-image: url(img/ourteam3.png);
+        right: 0%;
+        top: 86.5%;
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+    }
+    .pawprint.paw5 {
+        left: 0;
+        bottom: -55px;
+        top: 75%;
+    }
+    .pawprint.paw4 {
+        left: 5%;
+        bottom: 131px;
+    }
+    .mission .heading, .vision .heading {
+        display: flex;
+        align-items: center;
+        gap: -21px;
+        margin-bottom: 5px;
+    }
+    .pawprintttt.p6 {
+        display: none;
+    }
+    .pawprintttt.p8 {
+        right: -14%;
+        width: 244px;
+    }
+    #contact h2 {
+        margin-left: 10%;
+    }
+    .pawprint.paw1 {
+        top: -37.8px;
+    }
+    .pawprint.paw6 {
+        background-image: url(img/Logoooo.png);
+        margin-bottom: 20px;
+    }
+    .hp_pawprint6 {
+        background-image: url(img/hp8.png);
+        width: 165px;
+        height: 250px;
+        top: 143%;
+        left: 82%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .hero-text p {
+        font-size: 20pt;
+        top: 70%;
+        margin-top: 9px;
+    }
+    .social {
+        bottom: -138px;
+    }
+    .hp_pawprint2 {
+        top: 113.8%;
+        display: none;
+    }
+    .btn {
+        margin-top: 109px;
+    }
+    .hero-image img {
+        max-width: 1000px;
+        margin-top: -4%;
+    }
+    .hp_pawprint6 {
+        background-image: url(img/hp8.png);
+        width: 165px;
+        height: 250px;
+        top: 143%;
+        left: 82%;
+    }
+}
+
+@media (min-width:1201px)and(max-width: 1269px) {
+    .hero-text p {
+        font-size: 20pt;
+        top: 70%;
+        margin-top: 9px;
+    }
+    .social {
+        bottom: -94px;
+    }
+    .btn {
+        margin-top: 50px;
+    }
+    .hero-image img {
+        max-width: 950px;
+        margin-top: -5%;
+    }
+    .hp_pawprint6 {
+        background-image: url(img/hp8.png);
+        width: 165px;
+        height: 250px;
+        top: 143%;
+        left: 82%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-image img {
+        max-width: 950px;
+        height: auto;
+        margin-right: 0px;
+        margin-top: 0%;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)) drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+    }
+    .hero-text h2 {
+        font-size: 72pt;
+        top: 29%;
+    }
+    .hero-text p {
+        font-size: 17pt;
+        max-width: 410px;
+        position: absolute;
+        left: 10%;
+        top: 62%;
+        margin-top: 9px;
+        color: #6a3d3d;
+    }
+    .btn {
+        margin-top: 160px;
+        top: 111%;
+    }
+    .buttons {
+        top: 65%;
+    }
+    .image {
+        width: 495px;
+        height: auto;
+        margin-left: -80%;
+        margin-top: 55%;
+        top: -121px;
+        position: relative;
+    }
+    .social {
+        bottom: -34px;
+    }
+    .hp_pawprint2 {
+        top: 106.2%;
+        left: 35%;
+    }
+    .pawprinttttt.p6 {
+        right: 11%;
+        width: 171px;
+    }
+    .pawprinttttt.p2 {
+        right: -9.2%;
+        width: 280px;
+    }
+    .pawprinttttt.p4 {
+        right: -9.18%;
+        top: 120%;
+        width: 408px;
+    }
+    .lead {
+        font-size: 30pt;
+        color: black;
+        opacity: 78%;
+    }
+    .bigger {
+        font-size: 21pt;
+        margin-bottom: 10px;
+    }
+    .pawprinttttt.p7 {
+        right: 83%;
+        top: 5%;
+        width: 161px;
+    }
+    .pawprinttttt.p1 {
+        right: 83%;
+    }
+    .image-container {
+        bottom: -132%;
+        left: 0%;
+    }
+    .pawprinttttt.p9 {
+        right: 30%;
+        top: 149%;
+        width: 206px;
+        height: 230px;
+    }
+    .pawprinttttt.p5 {
+        right: -9%;
+        top: 72%;
+        width: 153px;
+    }
+    .pawprintttt.p1 {
+        right: 60%;
+        top: 5%;
+        width: 505px;
+    }
+    .pawprintttt.p6 {
+        right: 6%;
+        top: 30.5%;
+        width: 173px;
+        height: 250px;
+    }
+    .mission h3, .vision h3 {
+        font-family: 'museo', sans-serif;
+        font-weight: 700;
+        font-size: 42pt;
+        color: black;
+    }
+    .vision .heading img {
+        margin-left: 5px;
+    }
+    .mission .heading img, .vision .heading img {
+        width: 92px;
+        height: auto;
+    }
+    #mission-vision .cards {
+        padding: 60px 40px;
+        width: 78%;
+        margin-left: 23%;
+    }
+    .card, .cards {
+        margin-top: 10px;
+    }
+    #mission-vision .card {
+        padding: 60px 40px;
+        width: 78%;
+    }
+    #mission-vision .meow, #mission-vision .aww {
+        width: 448px;
+    }
+    .pawprintttt.p4 {
+        right: -10%;
+        top: 62.2%;
+        width: 531px;
+    }
+    .pawprinttt.paw2 {
+        right: -4%;
+        top: -9%;
+        width: 215px;
+    }
+    .pawprinttt.paw4 {
+        display: none;
+    }
+    .gallery-item-5 {
+        left: 82%;
+        opacity: .4;
+        transform: translateX(-50%);
+    }
+    .pawprint.paw1 {
+        background-image: url(img/ourteam1.png);
+        right: 0%;
+        top: -38.5px;
+        width: 463px;
+        height: 600px;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .pawprint.paw6 {
+        left: 29%;
+    }
+    .move-up {
+        margin-top: 0px;
+    }
+    .pawprint.paw4 {
+        left: 5%;
+        bottom: -138px;
+    }
+    .pawprint.paw3 {
+        top: 86%;
+    }
+    #contact h2 {
+        margin-left: 11%;
+    }
+    .pawprintt.paw4 {
+        left: 39%;
+        top: -50px;
+    }
+    .hp_pawprint6 {
+        background-image: url(img/hp8.png);
+        width: 165px;
+        height: 250px;
+        top: 126%;
+        left: 30%;
+    }
+    .biton {
+        font-family: 'myriad hebrew', sans-serif;
+        font-size: 1.2rem;
+        padding: 15px 30px;
+        background-color: #cda18a;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5rem;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        position: relative;
+        top: -80px;
+    }
+}
+
+
+@media (max-width:1102px){
+    .logo img {
+        height: 80px;
+        margin-right: 1px;
+        margin-left: -1rem;
+        margin-top: 17px;
+        z-index: 1;
+    }
+    .hero-image img {
+        max-width: 803px;
+        margin-top: -2%;
+     }
+     
+     .hp_pawprint1 {
+        background-image: url(img/hp1.png);
+        width: 292px;
+        height: 550px;
+        top: 0px;
+        left: -2%;
+        z-index: 0;
+    }
+     
+
+}
+
+
+@media (max-width:1046px){
+    
+    .image {
+        width: 441px;
+        height: auto;
+        margin-left: -57%;
+        margin-top: 55%;
+    }
+    #contact h2 {
+        margin-left: 11%;
+        z-index: 1;
+        position: relative;
+    }
+    .hp_pawprint6 {
+       display: none;
+    }
+    .hp_pawprint3 {
+        background-image: url(img/hp3.png);
+        width: 206px;
+        height: 150px;
+        top: 29%;
+        left: 73%;
+    }
+    .hero-image img {
+        max-width: 777.9px;
+        height: auto;
+        margin-right: 0px;
+        margin-top: -5%;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)) drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+    }
+    .image {
+        width: 465px;
+        height: auto;
+        margin-left: -47%;
+        margin-top: 55%;
+    }
+    .pawprintttt.p1 {
+        right: 69%;
+        top: -2%;
+        width: 505px;
+    }
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem;
+    }
+    .mission .heading, .vision .heading {
+        display: flex;
+        align-items: center;
+        gap: -21px;
+        margin-bottom: -33px;
+    }
+    .pawprint.paw1 {
+        background-image: url(img/ourteam1.png);
+        right: 0%;
+        top: -40.7px;
+        width: 406px;
+        height: 600px;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .pawprint.paw2 {
+        background-image: url(img/ourteam2.png);
+        left: 0%;
+        top: -41px;
+        width: 384px;
+        height: 600px;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+    }
+    .pawprint.paw6 {
+        left: 24%;
+    }
+    #mission-vision {
+        background-color: #f8f8f8;
+        padding: 4px 100px;
+        margin-top: -10%;
+        position: relative;
+        width: 1005;
+        padding-bottom: 3.2%;
+        overflow: hidden;
+    }
+    #galleryy::before {
+        width: 351px;
+        height: 400px;
+        bottom: -11%;
+        left: 1%;
+        opacity: 0.3;
+    }
+    #galleryy::after {
+        width: 375px;
+        height: 450px;
+        bottom: -24%;
+        right: 1%;
+        opacity: 0.3;
+    }
+    .social {
+        bottom: -174px;
+    }
+    main {
+        height: 607px;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 980px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-container {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        z-index: 999;
+        background-color: #614439; /* Background color for the dropdown */
+        width: 100%; /* Ensure the dropdown covers the entire screen width */
+        height: 100%; /* Ensure the dropdown covers the entire screen height */
+        top: 0;
+        left: 0;
+    }
+
+    .nav-container.show-nav {
+        display: flex;
+        margin-top: 6.5%;
+        left: auto;
+        right: 0;
+        width: fit-content;
+    }
+
+    .nav-container a {
+            margin-bottom: 32px;
+            color: #ffffff;
+        }
+}
+
+
+
+@media (max-width: 960px) {
+    
+    .hero-image img {
+        max-width: 637px;
+        height: auto;
+        margin-right: 0px;
+        margin-top: 11%;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)) drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+    }
+    .social {
+        bottom: -207px;
+    }
+    .btn {
+        margin-top: 305px;
+    }
+    .hero-text h2 {
+        font-size: 73pt;
+        top: 27%;
+    }
+    .hero-text p {
+        font-size: 23pt;
+        max-width: 311px;
+        position: absolute;
+        left: 10%;
+        top: 68%;
+        margin-top: 9px;
+        color: #6a3d3d;
+    }
+    .hp_pawprint4 {
+        background-image: url(img/hp4.png);
+        width: 92px;
+        height: 150px;
+        top: 43%;
+        left: 0%;
+    }
+    .hp_pawprint6 {
+       display: none;
+    }
+    .buttons {
+        display: flex;
+        gap: 20px;
+        position: absolute;
+        left: 10%;
+        top: 58%;
+    }
+    
+}
+
+
+@media (max-width:820px){
+    .nav-container.show-nav {
+        display: flex;
+        margin-top: 8.5%;
+        left: auto;
+        right: 0;
+        width: fit-content;
+    }   
+    .social {
+        bottom: -242px;
+    }
+    .hero-text h2 {
+        font-size: 66pt;
+        top: 27%;
+    }
+    .hero-text p {
+        font-size: 21pt;
+        max-width: 289px;
+        position: absolute;
+        left: 10%;
+        top: 72%;
+        margin-top: -16px;
+        color: #6a3d3d;
+    }
+    .hp_pawprint6 {
+        background-image: url(img/hp8.png);
+        width: 224px;
+        height: 250px;
+        top: 147%;
+        left: 44%;
+    }
+    .btn {
+        margin-top: 305px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        bottom: -83%;
+    }
+    .btn {
+        padding: 10px 30px;
+        margin: -1px 0;
+    }
+    .pawprinttttt.p2 {
+        right: -2.2%;
+        width: 187px;
+    }
+    .pawprinttttt.p7 {
+        right: 83%;
+        top: 0%;
+        width: 161px;
+    }
+    .lead {
+        font-size: 22pt;
+        color: black;
+        opacity: 78%;
+    }
+    .bigger {
+        font-size: 16pt;
+        margin-bottom: 10px;
+    }
+    #about {
+        height: 598px;
+    }
+    .image {
+        width: 351px;
+        height: auto;
+        margin-left: -47%;
+        margin-top: 55%;
+    }
+    #mission-vision {
+        background-color: #f8f8f8;
+        padding: 27px 0px;
+        margin-top: -10%;
+        position: relative;
+        width: 1005;
+        padding-bottom: 3.2%;
+        overflow: hidden;
+    }
+    .pawprintttt.p8 {
+        right: -14%;
+        width: 238px;
+        top: 0;
+    }
+    #our-services {
+        text-align: center;
+        padding: 0px 20px;
+        padding-bottom: 20px;
+        overflow: hidden;
+    }
+    .pawprinttt.paw2 {
+        right: -4%;
+        top: -3%;
+        width: 168px;
+    }
+    .pawprinttt.paw1 {
+        background-image: url(img/contact7.png);
+        right: 87.7%;
+        top: -3.85%;
+        width: 330px;
+        height: 330px;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+    }
+    #galleryy::after {
+        width: 264px;
+        height: 450px;
+        bottom: -24%;
+        right: 1%;
+        opacity: 0.3;
+    }
+    #galleryy::before {
+        width: 238px;
+        height: 400px;
+        bottom: -16%;
+        left: 1%;
+        opacity: 0.3;
+    }
+    .pawprint.paw6 {
+        left: 19%;
+    }
+    .pawprint.paw2 {
+        left: -1%;
+        top: -41px;
+        width: 306px;
+    }
+    .pawprint.paw1 {
+        background-image: url(img/ourteam1.png);
+        right: 0%;
+        top: -42.7px;
+        width: 336px;
+       }
+       .pawprint.paw1 {
+        right: 0%;
+        top: -42.7px;
+        width: 336px;
+        }
+        .pawprint.paw5 {
+            top: 84.3%;
+        }
+        .pawprint.paw3 {
+            top: 92%;
+        }
+        .pawprintt.paw3 {
+            left: -13.2%;
+            top: -56px;
+            width: 210px;
+        }
+        .pawprintt.paw4 {
+            left: 51%;
+            top: -50px;
+        }
+        .contact-column.right {
+            margin-left: -57px;
+        }
+        .contact-item img {
+            width: 108px;
+            margin-right: 20px;
+        }
+        footer {
+            background-color: #ede0d1;
+            padding: 20px 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .footer-logo img {
+            width: 115px;
+        }
+        .pawprintt.paw2 {
+            right: 48%;
+            top: 271px;
+            width: 180px;
+        }
+        .footer-copyright {
+            margin-bottom: 0%;
+        }
+        .pawprintt.paw5 {
+            display: none;
+        }
+        main {
+            height: 600px;
+            overflow: hidden;
+        }
+}
+@media (max-width:730px){
+    .hero-image img {
+        max-width: 505px;
+    }
+    .hero-text h2 {
+        font-size: 57pt;
+        top: 32%;
+    }
+    .hero-text p {
+        font-size: 19pt;
+        max-width: 254px;
+        position: absolute;
+        left: 10%;
+        top: 72%;
+        margin-top: -16px;
+        color: #6a3d3d;
+    }
+    .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        bottom: -71%;
+    }
+    .hp_pawprint6 {
+        background-image: url(img/hp8.png);
+        width: 182px;
+        height: 250px;
+        top: 142%;
+        left: 44%;
+    }
+    .hp_pawprint5 {
+        background-image: url(img/hp5.png);
+        width: 76px;
+        height: 150px;
+        top: 63%;
+        left: 40%;
+    }
+    .hp_pawprint3 {
+        background-image: url(img/hp3.png);
+        width: 234px;
+        height: 150px;
+        top: 29%;
+        left: 70%;
+    }
+    .hp_pawprint3 {
+        background-image: url(img/hp3.png);
+        width: 234px;
+        height: 150px;
+        top: 29%;
+        left: 67%;
+    }
+    .hero-image img {
+        margin-top: 19%;
+     }
+    .pawprinttttt.p4 {
+        right: -9.18%;
+        top: 103%;
+        width: 408px;
+    }
+    .biton {
+        position: relative;
+        top: -58px;
+    }
+    .image-container {
+        bottom: -83%;
+        left: 0%;
+    }
+    main {
+        height: 702px;
+        overflow: hidden;
+    }
+    .social {
+        bottom: -277px;
+    }
+    .content p {
+        margin-bottom: 11px;
+    }
+    .bigger {
+        font-size: 15pt;
+        margin-bottom: 10px;
+    }
+    #mission-vision .text {
+        font-size: 15pt;
+        margin-bottom: 20px;
+        font-family: 'publica sans', sans-serif;
+        line-height: 1.5;
+        color: #613811;
+        margin: 10px 0;
+        text-align: center;
+    }
+    #mission-vision .card {
+        padding: 60px 40px;
+        width: 60%;
+    }
+    #mission-vision .cards {
+        padding: 60px 40px;
+        width: 60%;
+        margin-left: 4%;
+    }
+    .flex-container {
+        margin: 0;
+    }
+    .pawprintttt.p1 {
+        display: none;
+    }
+    .mission .heading, .vision .heading {
+        margin-bottom: -52px;
+        margin-left: -29px;
+        margin-right: 5px;
+    }
+    .mission h3, .vision h3 {
+        font-family: 'museo', sans-serif;
+        font-weight: 700;
+        font-size: 28pt;
+        color: black;
+    }
+    .paw-print {
+        width: 195px;
+    }
+    #galleryy::after {
+        width: 215px;
+        height: 450px;
+        bottom: -29%;
+        right: 1%;
+        opacity: 0.3;
+    }
+    #galleryy::before {
+        width: 181px;
+        height: 400px;
+        bottom: -18%;
+        left: 1%;
+        opacity: 0.3;
+    }
+    .pawprint.paw1 {
+        width: 282px;
+    }
+    .pawprint.paw2 {
+        width: 306px;
+        left: -7%;
+    }
+    .pawprint.paw6 {
+        left: 16%;
+    }
+    .pawprint.paw5 {
+        top: 90%;
+        width: 352px;
+    }
+    .pawprint.paw4 {
+      display: none
+    }
+    .pawprintt.paw3 {
+        top: -58px;
+        width: 189px;
+    }
+    #contact h2 {
+        font-family: 'Museo', sans-serif;
+        font-weight: 700;
+        font-size: 40pt;
+        margin-bottom: 32px;
+    }
+    .pawprintt.paw4 {
+        width: 101px;
+    }
+    .contact-item img {
+        width: 80px;
+        margin-right: 7px;
+    }
+    .contact-text h3 {
+        font-size: 0.9em;
+    }
+    .contact-text p {
+        font-size: 14px;
+    }
+    .contact-text p {
+        font-family: 'Publica sans', sans-serif;
+        margin: 7px 0 0;
+        font-size: 13px;
+        color: #333;
+    }
+    .footer-copyright {
+        margin-bottom: -2%;
+        margin-left: -91px;
+    }
+    .footer-logo img {
+        width: 94px;
+    }  
+    .pawprintt.paw2 {
+        right: 48%;
+        top: 189px;
+        width: 167px;
+    }
+    .pawprinttttt.p6 {
+        display: none;
+    }
+    .social{
+        bottom: -200px;
+    }
+    .main{
+        height: 550px;
+    }
+
+
+}
+@media(max-width:680px){
+    .main {
+        height: 490px;
+    }
+    .logo img {
+        margin-top: -20px;
+        z-index: 1;
+    }
+    .logo {
+        margin-top: -16px;
+    }
+    .hp_pawprint1 {
+        width: 222px;
+    }
+    .hero-text h2 {
+        font-size: 46pt;
+        top: 18%;
+    }
+    .hero-image img {
+        max-width: 450px;
+        margin-top: 4%;
+    }
+    .hero-text p {
+        margin-top: -132px;
+    }
+    .buttons {
+        bottom: -25%;
+    }
+    .social-icon-container {
+        width: 43px;
+        height: 43px;
+    }
+    .social {
+        bottom: -74px;
+    }
+    .hp_pawprint6 {
+        background-image: url(img/hp8.png);
+        width: 182px;
+        height: 250px;
+        top: 112%;
+        left: 52%;
+    }
+    main {
+        height: 616px;
+        overflow: hidden;
+    }
+    .content p {
+        margin-bottom: 20px;
+    }
+    .bigger {
+        font-size: 13pt;
+        margin-bottom: 10px;
+    }
+    .pawprinttttt.p4 {
+        right: -9.18%;
+        top: 118%;
+        width: 303px;
+    }
+    .pawprint.paw6 {
+        left: 10%;
+    }
+    .pawprint.paw2 {
+        width: 245px;
+        left: -7%;
+    }
+    .pawprint.paw1 {
+        width: 235px;
+    }
+    .hp_pawprint3 {
+        width: 139px;
+        height: 150px;
+        top: 22%;
+        left: 67%;
+    }
+}
+@media (max-width:620px){
+    .hero-text p {
+        font-size: 16pt;
+        max-width: 191px;
+    }
+    .content p {
+        margin-top: -8px;
+        margin-bottom: 19px;
+        padding: 5px 27px;
+    }
+    .lead {
+        margin-top: -18px;
+        font-size: 20pt;
+        color: black;
+        opacity: 78%;
+    }
+    .pawprinttttt.p3 {
+        top: 86%;
+        width: 705px;
+    }
+    .image {
+        width: 307px;
+        height: auto;
+        margin-left: -47%;
+        margin-top: 43%;
+        top: 88px;
+        position: relative;
+    }
+    .image-container {
+        bottom: -68%;
+        left: 1%;
+    }
+    #about {
+        height: 539px;
+    }
+    .biton {
+        position: relative;
+        top: -69px;
+    }
+    .paw-print {
+        width: 154px;
+    }
+    #galleryy::after {
+        width: 155px;
+    }
+    #galleryy::before {
+        width: 146px;
+    }
+}
+@media (max-width:584px){
+    .contact-item img {
+        width: 68px;
+        margin-right: 7px;
+    }
+    .pawprintt.paw3 {
+        width: 157px;
+    }
+    .pawprintt.paw4 {
+        left: 51%;
+        top: -37px;
+        width: 89px;
+    }
+    #contact h2 {
+        font-size: 35pt;
+        top: -23px;
+        left: 10px;
+    }
+    .pawprint.paw6 {
+        left: 10%;
+        width: 74px;
+    }
+    #team h2 {
+        font-size: 3rem;
+        margin-bottom: -17px;
+        color: #613811;
+        font-family: 'museo', sans-serif;
+        font-weight: 700;
+        font-size: 38pt;
+        color: black;
+        margin-top: -3%;
+    }
+    .pawprint.paw1 {
+        width: 195px;
+    }
+    .pawprintt.paw2 {
+        display: none;
+    }
+    .image {
+        width: 294px;
+        margin-left: -54%;
+        top: 37px;
+    }
+    .biton {
+        font-size: 1rem;
+        padding: 11px 18px;
+        top: -97px;
+    }
+    .pawprinttttt.p4 {
+        right: -9.18%;
+        top: 110%;
+        width: 303px;
+    }
+    .flex-container {
+        margin: -23px;
+        margin-bottom: 10px;
+    }
+    #mission-vision .text {
+        font-size: 11pt;
+        margin-bottom: 20px;
+        font-family: 'publica sans', sans-serif;
+        line-height: 1.5;
+        color: #613811;
+        margin: -3px 0;
+        text-align: center;
+    }
+    #mission-vision .meow, #mission-vision .aww {
+      display: none;
+    }
+    #mission-vision .cards {
+        padding: 60px 40px;
+        width: 60%;
+        margin-left: 22%;
+    }
+    .mission h3, .vision h3 {
+        font-family: 'museo', sans-serif;
+        font-weight: 700;
+        font-size: 28pt;
+        color: black;
+        left: -19px;
+        position: relative;
+    }
+    .pawprint.paw5 {
+        top: 91.6%;
+        width: 302px;
+    }
+    .pawprint.paw3 {
+        top: 95.5%;
+        width: 200px;
+    }
+    .footer-copyright {
+        margin-bottom: -5%;
+        font-size: 0.8rem;
+        margin-left: -246px;
+    }
+    .footer-links h4 {
+        font-size: 1rem;
+        color: #5e5347;
+    }
+    .stay-connected button[type="submit"] {
+        padding: 1px 7px;
+        background-color: #5d5346;
+        color: #fff;
+        font-family: 'Publica sans', sans-serif;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+    }
+    .footer-links {
+        display: flex;
+        margin-bottom: -18px;
+    }
+    .footer-logo img {
+        width: 71px;
+        top: 11px;
+        position: relative;
+    }
+    .footer-links .quick-links, .footer-links .useful-links {
+        margin-right: 5px;
+        margin-left: -4px;
+    }
+    .footer-links ul li a {
+        font-family: 'Publica sans', sans-serif;
+        color: #777;
+        text-decoration: none;
+        font-size: 13px;
+    }
+}
+@media  (max-width: 540px){
+    .hero-text p {
+        font-size: 16pt;
+        max-width: 152px;
+    }
+    .buttons {
+        bottom: -36%;
+    }
+    .social {
+        bottom: -100px;
+    }
+    .main{
+        height: 519px;
+    }
+
+}
+@media(max-width:500px){
+    .nav-container.show-nav {
+        display: flex;
+        margin-top: 11%;
+        left: auto;
+        right: 0;
+        width: fit-content;
+    }
+    .hero-text p {
+        font-size: 16pt;
+        max-width: 154px;
+        top: 50%;
+    }
+    .hp_pawprint6 {
+        display: none;
+    }
+    .buttons {
+        bottom: 20%;
+        left: 32%;
+    }
+    .hp_pawprint5 {
+        background-image: url(img/hp5.png);
+        width: 76px;
+        height: 150px;
+        top: 63%;
+        left: 63%;
+    }
+    .hp_pawprint3 {
+        width: 93px;
+        height: 150px;
+        top: 13%;
+        left: 67%;
+    }
+    .btn {
+        padding: 6px 9px;
+        margin: -1px 0;
+    }
+    .social {
+        bottom: -174px;
+        left: 184px;
+        bottom: 16%;
+    }
+    .main {
+        height: 551px;
+    }
+    .flex-container {
+        margin: -66px;
+        margin-bottom: 10px;
+        margin-top: -30px;
+    }
+    .hero-text h2 {
+        font-size: 46pt;
+        top: 13%;
+    }
+    .hero-image img {
+        max-width: 420px;
+        margin-top: -3%;
+    }
+    .image {
+        width: 273px;
+        margin-left: -101%;
+        top: 18px;
+    }
+    .flex-container {
+        margin: -70px;
+        margin-bottom: 10px;
+        margin-top: -30px;
+    }
+    .pawprint.paw2 {
+        width: 214px;
+        left: -9%;
+    }
+    .contact-column.right {
+        margin-left: -95px;
+    }
+    .contact-text p {
+        font-family: 'Publica sans', sans-serif;
+        margin: 7px 0 0;
+        font-size: 11px;
+        color: #333;
+    }
+    .contact-column.right {
+        margin-left: -35px;
+    }
+    
+}
+
+@media (max-width:460px){
+        .menu-icon {
+            display: block;
+            margin-top: -14%;
+            position: relative;
+        }
+    .pawprinttt.paw1 {
+        background-image: url(img/contact7.png);
+        right: 87.7%;
+        top: -2.5%;
+        width: 159px;
+        height: 330px;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+    }
+    
+    .hero-text p {
+        font-size: 15pt;
+        max-width: 159px;
+        top: 53%;
+    }
+    .hero-text h2 {
+        font-size: 42pt;
+        top: 15%;
+    }
+    .hero-image img {
+        max-width: 326px;
+        margin-top: 17%;
+    }
+    .hp_pawprint6 {
+       display: none;
+    }
+    .btn {
+        padding: 6px 9px;
+        margin: -1px 0;
+    }
+    .image {
+        width: 230px;
+        margin-left: -100%;
+        top: 25px;
+    }
+    .pawprinttt.paw2 {
+        right: -8%;
+        top: -2%;
+        width: 105px;
+    }
+    .pawprinttttt.p4 {
+        right: -9.18%;
+        top: 113%;
+        width: 247px;
+    }
+    .social {
+        bottom: -174px;
+        left: 164px;
+        bottom: 16%;
+    }
+    .hp_pawprint3 {
+        width: 84px;
+        height: 150px;
+        top: 17%;
+        left: 67%;
+    }   
+    .buttons {
+        bottom: 18%;
+        left: 30%;
+    }
+    #about h2 {
+        color: black;
+        margin-top: 0;
+        font-family: 'museo', sans-serif;
+        font-weight: 700;
+        font-size: 37pt;
+        top: 80%;
+    }
+    .pawprinttttt.p2 {
+        right: -2.2%;
+        width: 130px;
+    }
+    .lead {
+            margin-top: -20px;
+            margin-bottom: 23px;
+            padding: 5px 27px;
+        font-size: 17pt;
+    }
+    .bigger {
+        font-size: 13pt;
+        margin-bottom: 10px;
+    }
+    #mission-vision .cards {
+        padding: 10px 41px;
+        width: 38%;
+        margin-right: 0%;
+    }
+    #mission-vision .card {
+        padding: 10px 41px;
+        width: 38%;
+        margin-left: 0%;
+    }
+    .flex-container {
+        margin: -23px;
+        margin-bottom: 10px;
+        margin-left: -93px;
+    }
+    .mission h3, .vision h3 {
+        font-family: 'museo', sans-serif;
+        font-weight: 700;
+        font-size: 26pt;
+        color: black;
+        left: 2px;
+        position: relative;
+        margin-bottom: 43px;
+    }
+    .mission .heading img, .vision .heading img {
+        width: 74px;
+        height: auto;
+        left: 25px;
+        position: relative;
+    }
+    .footer-links .quick-links, .footer-links .useful-links {
+        margin-right: 37px;
+        margin-left: -19px;
+    }
+    .contact-item img {
+        width: 63px;
+        margin-right: 7px;
+    }
+    .pawprintt.paw3 {
+        width: 131px;
+    }
+    .pawprintt.paw4 {
+        left: 67%;
+        top: -37px;
+        width: 89px;
+    }
+    .contact-column.right {
+        margin-left: 22px;
+    }
+    .contact-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        top: -34px;
+        position: relative;
+        margin-bottom: -20px;
+    }
+    #galleryy::after {
+        width: 116px;
+    }
+    #galleryy::before {
+        width: 126px;
+    }
+    .footer-copyright {
+        margin-bottom: -5%;
+        font-size: 0.8rem;
+        margin-left: -353px;
+        bottom: -114px;
+        position: relative;
+        left: 10px;
+    }
+    main {
+        height: 505px;
+        overflow: hidden;
+    }
+    footer {
+        padding-bottom: 0px;
+        overflow: hidden;
+    }
+      .stay-connected h4 {
+        font-family: 'Kamerik', sans-serif;
+        margin-bottom: 12px;
+        font-size: 1rem;
+        color: #5e5347;
+        position: relative;
+        left: -29px;
+    }
+    .stay-connected input[type="email"] {
+        padding: 10px;
+        border: 1px solid #5d5346;
+        border-radius: 5px 0 0 5px;
+        font-family: 'Publica sans', sans-serif;
+        outline: none;
+        position: relative;
+        left: -33px;
+        width: 117px;
+    }
+    .stay-connected button[type="submit"] {
+        padding: 5px 10px;
+        background-color: #5d5346;
+        color: #fff;
+        font-family: 'Publica sans', sans-serif;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        position: relative;
+        left: -123px;
+        top: 44px;
+    }
+    .pawprint.paw1 {
+        width: 148px;
+    }
+    .pawprint.paw6 {
+        left: 9%;
+        width: 61px;
+        top: -1px;
+    }
+    .pawprint.paw2 {
+        width: 171px;
+        left: -7%;
+    }
+    #team h2 {
+        font-size: 3rem;
+        margin-bottom: -17px;
+        color: #613811;
+        font-family: 'museo', sans-serif;
+        font-weight: 700;
+        font-size: 31pt;
+        color: black;
+        margin-top: -3%;
+    }
+    .hp_pawprint5 {
+        background-image: url(img/hp5.png);
+        width: 76px;
+        height: 150px;
+        top: 63%;
+        left: 61%;
+    }
+}
+
+
+@media (max-width:400px){
+    .menu-icon {
+        display: block;
+        margin-top: -19%;
+        position: relative;
+    }
+        .hero-text p {
+            font-size: 15pt;
+            max-width: 153px;
+            top: 52%;
+        }
+    .hero-image img {
+        max-width: 280px;
+        margin-top: 14%;
+    }
+    .buttons {
+        bottom: 26%;
+        left: 26%;
+    }
+    .social {
+        left: 134px;
+        bottom: 170px;
+    }
+    .pawprint.paw5 {
+        top: 94.6%;
+        width: 207px;
+    }
+    .main {
+        height: 503px;
+    }
+    .hero-text h2 {
+        font-size: 42pt;
+        top: 14%;
+    }
+    .hp_pawprint3 {
+        width: 66px;
+        height: 150px;
+        top: 11%;
+        left: 73%;
+    }
+    .hp_pawprint5 {
+        background-image: url(img/hp5.png);
+        width: 76px;
+        height: 150px;
+        top: 58%;
+        left: 66%;
+    }
+    .btn {
+        padding: 2px 9px;
+        margin: -8px 0;
+    }
+    .biton {
+        font-size: 1rem;
+        padding: 11px 18px;
+        top: -127px;
+    }
+    .pawprinttttt.p4 {
+        right: -9.18%;
+        top: 104%;
+        width: 221px;
+    }
+    .image {
+        width: 204px;
+        margin-left: -118%;
+        top: -41px;
+    }
+    #mission-vision .cards {
+        padding: 10px 41px;
+        width: 38%;
+        margin-right: 10%;
+    }
+
+    
+    
+}
+
+@media (max-width: 384px){
+    .mission {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 87px;
+    }
+    
+}
+@media (max-width: 372px){
+    .menu-icon {
+        display: block;
+        margin-top: -23%;
+        position: relative;
+    }
+    .mission {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 83px;
+    }
+    .buttons {
+        bottom: 29%;
+        left: 26%;
+    }
+    
+}
+
+
+
+@media (max-width:360px) {
+    .menu-icon {
+        display: block;
+        top: 7px;
+        position: relative;
+    }
+    .nav-container.show-nav {
+        display: flex;
+        top: 7px;
+        right: 0;
+    } 
+  
+    .mission {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 101px;
+    }
+    .hp_pawprint3 {
+        width: 42px;
+        height: 150px;
+        top: 12%;
+        left: 67%;
+    }
+    .hp_pawprint4 {
+        background-image: url(img/hp4.png);
+        width: 72px;
+        height: 150px;
+        top: 43%;
+        left: 0%;
+    }
+    
+    #mission-vision .cards {
+        padding: 9px 41px;
+        width: 38%;
+        margin-right: 47%;
+    }
+    #mission-vision .card {
+        padding: 10px 41px;
+        width: 38%;
+        margin-left: -11%;
+    }
+    .mission .heading, .vision .heading {
+        margin-bottom: -52px;
+        margin-left: -45px;
+        margin-right: 5px;
+    }
+     
+    .biton {
+        font-size: 1rem;
+        padding: 11px 18px;
+        top: -142px;
+    }
+    .image {
+        width: 198px;
+        margin-left: -119%;
+        top: -62px;
+    }
+    .pawprinttttt.p4 {
+        right: -9.18%;
+        top: 105%;
+        width: 247px;
+    }
+    footer {
+        padding-bottom: 0px;
+        overflow: hidden;
+    }   
+    .social {
+        left: 116px;
+        bottom: 141px;
+    }
+    .buttons {
+        bottom: 22%;
+        left: 23%;
+    }
+    .hero-text p {
+        font-size: 15pt;
+        max-width: 143px;
+        top: 52%;
+    } 
+    .hero-image img {
+        max-width: 326px;
+        margin-top: 12%;
+    }
+    .btn {
+        padding: 2px 9px;
+        margin: -8px 0;
+    }
+    .pawprint.paw6 {
+        left: 10%;
+        width: 60px;
+        top: -6px;
+    }
+    .pawprint.paw1 {
+        width: 125px;
+    }
+    #team h2 {
+        font-weight: 700;
+        font-size: 27pt;
+        color: black;
+    }
+    .pawprint.paw2 {
+        width: 153px;
+        left: -7%;
+    }
+    .pawprint.paw5 {
+        top: 93.6%;
+        width: 216px;
+    }
+    .main {
+        height: 528px;
+    }
+    .hero-text h2 {
+        font-size: 42pt;
+        top: 14%;
+    }
+    .hp_pawprint5 {
+        background-image: url(img/hp5.png);
+        width: 76px;
+        height: 150px;
+        top: 63%;
+        left: 70%;
+    }
+    .pawprintt.paw4 {
+        left: 77%;
+        top: -37px;
+        width: 89px;
+    }
+    .pawprintt.paw3 {
+        width: 104px;
+        top: -41px;
+    }
+    .pawprintttt.p8 {
+        right: 16%;
+        width: 79px;
+        top: 0;
+    }.pawprinttt.paw1 {
+        background-image: url(img/contact7.png);
+        right: 81.7%;
+        top: -1.4%;
+        width: 151px;
+        height: 330px;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+    }
+    
+    
+  
+
+}
